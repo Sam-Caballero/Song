@@ -1,13 +1,13 @@
+import { useEffect } from 'react';
 import Header from "./components/Header";
 import Song from "./components/Song";
 import './App.css';
 
 function App() {
-  /*
-  componentDidMount() {
+
+  useEffect(() => {
     console.log("La aplicación se ha cargado correctamente.");
-  } Este componente cusa errores
-  */
+  }, []);
 
   return (
     <div className="App">

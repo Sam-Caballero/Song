@@ -5,9 +5,10 @@ const SearchResults = ({songs, addToLibrary, library}) => {
         <>
             <h2>Busquedas</h2>
             <section>
-                {songs.map((song) => {
-                    <Song key={song.id} {...song} addToLibrary={addToLibrary} isInLibrary={library.includes(song.id)}/>
-                    console.log(song);
+                {songs.map((song) => {                    
+                    return (
+                        <Song key={song.id} {...song} addToLibrary={addToLibrary} isInLibrary={library.includes(song.id)}/>
+                    )
                 })}
             </section>
         </>

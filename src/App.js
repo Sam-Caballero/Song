@@ -36,7 +36,7 @@ function App() {
           <SearchResults songs={searchResults} addToLibrary={addToLibrary} library={library} />
         </article>
         <article className="Library-c">
-          <Library library={library} addToLibrary={addToLibrary} />
+          <Library songs={searchResults} library={library} addToLibrary={addToLibrary} />
         </article>
       </section>
     </div>

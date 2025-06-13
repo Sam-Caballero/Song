@@ -1,12 +1,14 @@
 import Song from './Song';
 
-const Library = ({ library, addToLibrary }) => {
+const Library = ({ songs, library, addToLibrary }) => {
     return (
         <>
             <h2>Biblioteca</h2>
             <section>
                 {library.map((songId) => {
-                    <Song key={songId} {...{ title: 'Título', artist: 'Artista', id: songId, isInLibrary: true }} addToLibrary={addToLibrary} />
+                    return (
+                        <Song key={songId} {...{ id: songId == songs.id, title: songs.title, artist: songs.artist, time: songs.time, isInLibrary: true }} addToLibrary={addToLibrary} />
+                    )
                 })}
             </section>
         </>
